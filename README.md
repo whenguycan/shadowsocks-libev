@@ -1,5 +1,5 @@
 backup for shadowsocks-libev from git
-yum install gcc openssl-devel make
+yum install git gcc openssl-devel make
 ./configure
 make && make install
 cp /root/shadowsocks-libev/shadowsocks.service /lib/systemd/system/shadowsocks.service
