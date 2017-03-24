@@ -2,8 +2,8 @@ backup for shadowsocks-libev from git
 yum install gcc openssl-devel make
 ./configure
 make && make install
-cp shadowsocks.service /lib/systemd/system/shadowsocks.servcie
-cp config.json /etc/shadowsocks/config.json
+cp /root/shadowsocks-libev/shadowsocks.service /lib/systemd/system/shadowsocks.service
+cp /root/shadowsocks-libev/config.json /etc/shadowsocks/config.json
 systemctl enable shadowsocks.service
 firewall-cmd --add-port=yourport/tcp --permanent
 firewall-cmd --reload
