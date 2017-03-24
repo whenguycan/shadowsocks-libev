@@ -3,6 +3,7 @@ yum install gcc openssl-devel make
 ./configure
 make && make install
 cp shadowsocks.service /lib/systemd/system/shadowsocks.servcie
+cp config.json /etc/shadowsocks/config.json
 systemctl enable shadowsocks.service
 firewall-cmd --add-port=yourport/tcp --permanent
 firewall-cmd --reload
