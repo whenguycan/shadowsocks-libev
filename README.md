@@ -1,4 +1,12 @@
 backup for shadowsocks-libev from git
+yum install gcc openssl-devel make
+./configure
+make && make install
+cp shadowsocks.service /lib/systemd/system/shadowsocks.servcie
+systemctl enable shadowsocks.service
+firewall-cmd --add-port=yourport/tcp --permanent
+firewall-cmd --reload
+reboot & enjoy it
 ================
 
 shadowsocks-libev
