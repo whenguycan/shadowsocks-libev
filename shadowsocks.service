@@ -1,0 +1,14 @@
+[Unit]
+Description=ShadowSocks Service
+After=syslog.target network.target auditd.service
+
+[Service]
+Type=simple
+User=nobody
+ExecStart=/usr/local/bin/ss-server -c /root/shadowsocks-libev/config.json
+ExecReload=/bin/kill -HUP 
+ExecStop=/bin/kill -s QUIT  
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
