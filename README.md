@@ -7,7 +7,7 @@ cp /root/shadowsocks-libev/config.json /etc/shadowsocks/config.json
 systemctl enable shadowsocks.service
 firewall-cmd --add-port=port/tcp --permanent
 firewall-cmd --reload
-°²×°bbr
+to install bbr
 reboot
 =================
 
