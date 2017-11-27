@@ -8,3 +8,4 @@ cp ~/shadowsocks-libev/config.json /etc/shadowsocks/config.json
 systemctl enable shadowsocks.service
 firewall-cmd --add-port=20517/tcp --permanent
 firewall-cmd --reload
+sh bbr.sh
