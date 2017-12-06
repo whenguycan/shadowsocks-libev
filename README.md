@@ -1,12 +1,21 @@
-backup for shadowsocks-libev from git
+﻿backup for shadowsocks-libev from git
+0
 yum install git gcc openssl-devel make net-tool
+git clone https://github.com/whenguycan/shadowsocks-libev.git
+cd ~/shadowsocks-libev
+1.1
+sh install.sh
+1.2
+chmod 777 configure
 ./configure
 make && make install
-cp /root/shadowsocks-libev/shadowsocks.service /lib/systemd/system/shadowsocks.service
-cp /root/shadowsocks-libev/config.json /etc/shadowsocks/config.json
+mkdir /etc/shadowsocks
+cp ~/shadowsocks-libev/shadowsocks.service /lib/systemd/system/shadowsocks.service
+cp ~/shadowsocks-libev/config.json /etc/shadowsocks/config.json
 systemctl enable shadowsocks.service
-firewall-cmd --add-port=port/tcp --permanent
+firewall-cmd --add-port=20517/tcp --permanent
 firewall-cmd --reload
+2.
 to install bbr
 reboot
 =================
