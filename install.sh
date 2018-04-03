@@ -1,5 +1,6 @@
 #! /bin/sh
 
+yum install gcc openssl-devel make net-tool
 sh configure
 make && make install
 mkdir /etc/shadowsocks
