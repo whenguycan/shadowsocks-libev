@@ -1,5 +1,5 @@
 {
-"server":"["0.0.0.0", "::"]",
+"server":"0.0.0.0",
 "server_port":20517,
 "password":"lambda33.1",
 "timeout":600,
